@@ -15,9 +15,20 @@ form.addEventListener('submit', e => {
     // console.log(score);
 
     // show result on page
-    result.querySelector('span').textContent = `${score}%`;
-    result.classList.remove('d-none');
+
     scrollTo(0,0);
+    result.classList.remove('d-none');
+
+    // Animation with Interval
+    let output = 0;
+    const timer = setInterval(() => {
+        result.querySelector('span').textContent = `${output}%`;
+        if(output === score) {
+            clearInterval(timer);
+        } else {
+            output++;
+        }
+    }, 10);
 
 });
 
