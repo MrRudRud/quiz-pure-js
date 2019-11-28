@@ -17,5 +17,22 @@ form.addEventListener('submit', e => {
     // show result on page
     result.querySelector('span').textContent = `${score}%`;
     result.classList.remove('d-none');
+    scrollTo(0,0);
 
 });
+
+// ===================================================
+// window object is global object
+// exp of window object:
+
+// console.log('hello');
+// window.console.log('hello');
+
+// console.log(document.querySelector('form'));
+// window.console.log(document.querySelector('form'));
+
+// setTimeout( ()=> {
+//     alert('hello setTimeout');
+// }, 3000);
+
+
